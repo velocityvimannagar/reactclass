@@ -7,6 +7,7 @@ function TicTacToe() {
     [-1, -1, -1],
   ]);
   const [winner, setWinner] = useState(-1);
+  const [currentPlayer, setCurrentPlayer] = useState(0);
   const winningCombinations = [
     [0, 3, 6],
     [1, 4, 7],
@@ -51,7 +52,6 @@ function TicTacToe() {
         return "O";
     }
   };
-  const [currentPlayer, setCurrentPlayer] = useState(0);
   return (
     <div className="parent-tictac-div">
       <br></br>

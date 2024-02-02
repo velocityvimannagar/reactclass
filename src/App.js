@@ -1,6 +1,7 @@
 import "./App.css";
 import UserProfile from "./UserProfile";
 import Counter from "./counter/Counter";
+import FormExample from "./forms-example/FormExample";
 import LoopingExample from "./looping-example/LoopingExample";
 import ObjectExample from "./object-example/ObjectExample";
 import RandomCounter from "./randomcounter/RandomCounter";
@@ -17,7 +18,8 @@ function App() {
       {/* <ObjectExample></ObjectExample> */}
       {/* <TodoList></TodoList> */}
       {/* <UserCrud> </UserCrud> */}
-      <TicTacToe></TicTacToe>
+      {/* <TicTacToe></TicTacToe> */}
+      <FormExample></FormExample>
     </div>
   );
 }
