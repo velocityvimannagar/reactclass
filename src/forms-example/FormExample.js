@@ -8,13 +8,17 @@ function FormExample() {
     textAreaInput: "",
     selectBoxInput: "",
     checkBoxInput: "",
-    radioButtonInput: ""
+    radioButtonInput: "",
   });
+  const [selectedFile, setSelectedFile] = useState(null);
   const onInputChange = (e) => {
     const { name, value, checked, type } = e.target;
     console.log(name, value, checked, type);
     formInput[name] = type == "checkbox" ? checked : value;
     setFormInput({ ...formInput });
+  };
+  const handleFileChange = (e) => {
+    setSelectedFile(e.target.files[0]);
   };
   return (
     <div>
@@ -93,8 +97,41 @@ function FormExample() {
       <div>
         <p>Radio Input</p>
         <label>
-          <input checked={formInput.radioButtonInput === 'male'} onChange={onInputChange} type="radio" name="radioButtonInput" value="male" /> Male
-          <input checked={formInput.radioButtonInput === 'female'} onChange={onInputChange} type="radio" name="radioButtonInput" value="female" /> Female
+          <input
+            checked={formInput.radioButtonInput === "male"}
+            onChange={onInputChange}
+            type="radio"
+            name="radioButtonInput"
+            value="male"
+          />{" "}
+          Male
+          <input
+            checked={formInput.radioButtonInput === "female"}
+            onChange={onInputChange}
+            type="radio"
+            name="radioButtonInput"
+            value="female"
+          />{" "}
+          Female
+        </label>
+      </div>
+      <div>
+        <label>
+          <p>Date Input</p>
+          <input
+            value={formInput.selectedDate}
+            onChange={onInputChange}
+            type="date"
+            name="selectedDate"
+          ></input>
+          <p>Selected date: {formInput.selectedDate}</p>
+        </label>
+      </div>
+      <div>
+        <label>
+          <p>File Picker</p>
+          <input onChange={handleFileChange} type="file"></input>
+          <p>Selected File: {selectedFile?.name}</p>
         </label>
       </div>
     </div>
@@ -102,9 +139,3 @@ function FormExample() {
 }
 
 export default FormExample;
-
-
-
-// 1) Tic Tac Toe Application
-// 2) Form Inputs 
-// 3) Image Carasoul
