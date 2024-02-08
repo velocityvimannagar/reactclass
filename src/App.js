@@ -12,6 +12,7 @@ import TicTacToe from "./tic-tac-toe/TicTacToe";
 import TodoList from "./todo-list/TodoList";
 import UserCrud from "./user-crud/UserCrud";
 import ImageCarasoul from "./image-carasoul/ImageCarasoul";
+import CountryList from "./countries-list/CountryList";
 
 function App() {
   const getRandom = () => {
@@ -41,7 +42,8 @@ function App() {
       >
         Change parent state
       </button> */}
-      <ImageCarasoul></ImageCarasoul>
+      {/* <ImageCarasoul></ImageCarasoul> */}
+      <CountryList></CountryList>
     </div>
   );
 }
