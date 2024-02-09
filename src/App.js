@@ -13,6 +13,7 @@ import TodoList from "./todo-list/TodoList";
 import UserCrud from "./user-crud/UserCrud";
 import ImageCarasoul from "./image-carasoul/ImageCarasoul";
 import CountryList from "./countries-list/CountryList";
+import PostsCrud from "./posts-crud/PostsCrud";
 
 function App() {
   const getRandom = () => {
@@ -43,7 +44,8 @@ function App() {
         Change parent state
       </button> */}
       {/* <ImageCarasoul></ImageCarasoul> */}
-      <CountryList></CountryList>
+      {/* <CountryList></CountryList> */}
+      <PostsCrud></PostsCrud>
     </div>
   );
 }

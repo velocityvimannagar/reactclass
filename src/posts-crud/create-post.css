@@ -1,0 +1,13 @@
+.create-post-form{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+    gap: 12px;
+}
+
+.create-post-component{
+    display: flex;
+    justify-content: center;
+}
