@@ -14,38 +14,43 @@ import UserCrud from "./user-crud/UserCrud";
 import ImageCarasoul from "./image-carasoul/ImageCarasoul";
 import CountryList from "./countries-list/CountryList";
 import PostsCrud from "./posts-crud/PostsCrud";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import { UserDetails } from "./user-crud/UserDetails";
 
 function App() {
-  const getRandom = () => {
-    return Math.floor(Math.random() * 100);
-  };
-  const [parentState, setParentState] = useState(getRandom());
-
-  const runMe = (data) => {
-    alert("Parent component run");
+  const navigate = useNavigate();
+  const showUserDetaiils = (id) => {
+    navigate("/users/1");
   };
   return (
     <div className="root-div">
-      {/* <Counter></Counter> */}
-      {/* <RandomCounter></RandomCounter> */}
-      {/* <LoopingExample></LoopingExample> */}
-      {/* <ObjectExample></ObjectExample> */}
-      {/* <TodoList></TodoList> */}
-      {/* <UserCrud> </UserCrud> */}
-      {/* <TicTacToe></TicTacToe> */}
-      {/* <FormExample></FormExample> */}
-      {/* <CommunicationDemo name="John" age={25} onSomeAction={runMe}></CommunicationDemo> */}
-      {/* <UseEffectHookDemo randomValue={parentState}></UseEffectHookDemo>
-      <button
-        onClick={() => {
-          setParentState(getRandom());
-        }}
-      >
-        Change parent state
-      </button> */}
-      {/* <ImageCarasoul></ImageCarasoul> */}
-      {/* <CountryList></CountryList> */}
-      <PostsCrud></PostsCrud>
+      <header>
+        My Application
+        <br></br>
+        <Link to={"/"}>Home</Link>
+        <br></br>
+        <Link to={"/users"}>Users</Link>
+        <br></br>
+        <Link to={"/posts"}>Posts</Link>
+        <br></br>
+        <button jdfjdonClick={showUserDetaiils}>Login</button>
+      </header>
+
+      <div>
+        <Routes>
+          <Route path="/" element={<div>This is a routing demo</div>}></Route>
+          <Route path="/users" element={<UserCrud></UserCrud>}></Route>
+          <Route path="/posts" element={<PostsCrud></PostsCrud>}></Route>
+          <Route
+            path="/users/:user_id"
+            element={<UserDetails> </UserDetails>}
+          ></Route>
+          <Route path="*" element={<div>This url is not mapped</div>}></Route>
+        </Routes>
+      </div>
+
+      {/* <UserCrud> </UserCrud>
+      <PostsCrud></PostsCrud> */}
     </div>
   );
 }
