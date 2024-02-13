@@ -39,15 +39,17 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<div>This is a routing demo</div>}></Route>
-          <Route path="/users" element={<UserCrud></UserCrud>}></Route>
+          <Route path="/users/*" element={<UserCrud></UserCrud>}></Route>
           <Route path="/posts" element={<PostsCrud></PostsCrud>}></Route>
-          <Route
-            path="/users/:user_id"
-            element={<UserDetails> </UserDetails>}
-          ></Route>
           <Route path="*" element={<div>This url is not mapped</div>}></Route>
         </Routes>
       </div>
+
+      {/* http://localhost:3000/users/list */}
+
+      {/* http://localhost:3000/users/details/1 */}
+      {/* http://localhost:3000/users/create */}
+
 
       {/* <UserCrud> </UserCrud>
       <PostsCrud></PostsCrud> */}
