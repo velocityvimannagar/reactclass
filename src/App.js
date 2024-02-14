@@ -16,6 +16,7 @@ import CountryList from "./countries-list/CountryList";
 import PostsCrud from "./posts-crud/PostsCrud";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { UserDetails } from "./user-crud/UserDetails";
+import AuthenticatedComponent, { HocDemo } from "./hoc/LogHoc";
 
 function App() {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ function App() {
         <br></br>
         <Link to={"/posts"}>Posts</Link>
         <br></br>
-        <button jdfjdonClick={showUserDetaiils}>Login</button>
+        <button onClick={showUserDetaiils}>Login</button>
       </header>
 
       <div>
@@ -45,11 +46,12 @@ function App() {
         </Routes>
       </div>
 
+      <AuthenticatedComponent name={"John"}></AuthenticatedComponent>
+
       {/* http://localhost:3000/users/list */}
 
       {/* http://localhost:3000/users/details/1 */}
       {/* http://localhost:3000/users/create */}
-
 
       {/* <UserCrud> </UserCrud>
       <PostsCrud></PostsCrud> */}
