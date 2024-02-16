@@ -6,6 +6,7 @@ function withAuth(WrappedCompnent) {
     const navigate = useNavigate();
     useEffect(() => {
       const token = localStorage.getItem("token");
+      console.log(token)
       if (!token) {
         console.log('I am not authenticated')
         navigate("/login");

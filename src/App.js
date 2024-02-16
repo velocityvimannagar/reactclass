@@ -17,12 +17,14 @@ import PostsCrud from "./posts-crud/PostsCrud";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { UserDetails } from "./user-crud/UserDetails";
 import AuthenticatedComponent, { HocDemo } from "./hoc/LogHoc";
+import { StatusBar } from "./custom-hooks/StatusBar";
 
 function App() {
   const navigate = useNavigate();
   const showUserDetaiils = (id) => {
     navigate("/users/1");
   };
+  const token = localStorage.setItem("token", "dfg");
   return (
     <div className="root-div">
       <header>
@@ -34,6 +36,9 @@ function App() {
         <br></br>
         <Link to={"/posts"}>Posts</Link>
         <br></br>
+        <br></br>
+        <Link to={"/online"}>User Online Status</Link>
+        <br></br>
         <button onClick={showUserDetaiils}>Login</button>
       </header>
 
@@ -42,11 +47,12 @@ function App() {
           <Route path="/" element={<div>This is a routing demo</div>}></Route>
           <Route path="/users/*" element={<UserCrud></UserCrud>}></Route>
           <Route path="/posts" element={<PostsCrud></PostsCrud>}></Route>
+          <Route path="/online" Component={StatusBar}></Route>
           <Route path="*" element={<div>This url is not mapped</div>}></Route>
         </Routes>
       </div>
 
-      <AuthenticatedComponent name={"John"}></AuthenticatedComponent>
+      {/* <AuthenticatedComponent name={"John"}></AuthenticatedComponent> */}
 
       {/* http://localhost:3000/users/list */}
 

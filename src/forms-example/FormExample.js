@@ -26,7 +26,7 @@ function FormExample() {
       <div>
         <label>
           <p>Text Input</p>
-          <input
+          <input  
             value={formInput.textInput}
             onChange={onInputChange}
             type="text"
