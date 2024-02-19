@@ -18,6 +18,7 @@ import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { UserDetails } from "./user-crud/UserDetails";
 import AuthenticatedComponent, { HocDemo } from "./hoc/LogHoc";
 import { StatusBar } from "./custom-hooks/StatusBar";
+import { CounterClass } from "./counter/CounterClass";
 
 function App() {
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ function App() {
         <button onClick={showUserDetaiils}>Login</button>
       </header>
 
-      <div>
+      {/* <div>
         <Routes>
           <Route path="/" element={<div>This is a routing demo</div>}></Route>
           <Route path="/users/*" element={<UserCrud></UserCrud>}></Route>
@@ -50,7 +51,8 @@ function App() {
           <Route path="/online" Component={StatusBar}></Route>
           <Route path="*" element={<div>This url is not mapped</div>}></Route>
         </Routes>
-      </div>
+      </div> */}
+      <CounterClass></CounterClass>
 
       {/* <AuthenticatedComponent name={"John"}></AuthenticatedComponent> */}
 
