@@ -19,6 +19,8 @@ import { UserDetails } from "./user-crud/UserDetails";
 import AuthenticatedComponent, { HocDemo } from "./hoc/LogHoc";
 import { StatusBar } from "./custom-hooks/StatusBar";
 import { CounterClass } from "./counter/CounterClass";
+import { CountryListClass } from "./countries-list/CountryListClass";
+import { ContextExample } from "./context/ContextExample";
 
 function App() {
   const navigate = useNavigate();
@@ -53,6 +55,10 @@ function App() {
         </Routes>
       </div> */}
       <CounterClass></CounterClass>
+
+      <CountryListClass></CountryListClass>
+
+      <ContextExample></ContextExample>
 
       {/* <AuthenticatedComponent name={"John"}></AuthenticatedComponent> */}
 
