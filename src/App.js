@@ -21,6 +21,7 @@ import { StatusBar } from "./custom-hooks/StatusBar";
 import { CounterClass } from "./counter/CounterClass";
 import { CountryListClass } from "./countries-list/CountryListClass";
 import { ContextExample } from "./context/ContextExample";
+import CounterRedux from "./store-example/counter-redux";
 
 function App() {
   const navigate = useNavigate();
@@ -54,11 +55,12 @@ function App() {
           <Route path="*" element={<div>This url is not mapped</div>}></Route>
         </Routes>
       </div> */}
-      <CounterClass></CounterClass>
+      {/* <CounterClass></CounterClass>
 
       <CountryListClass></CountryListClass>
 
-      <ContextExample></ContextExample>
+      <ContextExample></ContextExample> */}
+      <CounterRedux></CounterRedux>
 
       {/* <AuthenticatedComponent name={"John"}></AuthenticatedComponent> */}
 
