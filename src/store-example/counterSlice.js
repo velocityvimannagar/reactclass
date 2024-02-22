@@ -12,7 +12,6 @@ const counterSlice = createSlice({
     },
     decrement: (state, data) => {
       console.log("Decrementing the count");
-
       state.counter = state.counter - 1;
     },
   },

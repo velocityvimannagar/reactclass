@@ -22,6 +22,7 @@ import { CounterClass } from "./counter/CounterClass";
 import { CountryListClass } from "./countries-list/CountryListClass";
 import { ContextExample } from "./context/ContextExample";
 import CounterRedux from "./store-example/counter-redux";
+import TodoListUsingRedux from "./store-example/TodoListUsingRedux";
 
 function App() {
   const navigate = useNavigate();
@@ -61,6 +62,9 @@ function App() {
 
       <ContextExample></ContextExample> */}
       <CounterRedux></CounterRedux>
+
+      <TodoListUsingRedux></TodoListUsingRedux>
+      <TodoListUsingRedux></TodoListUsingRedux>
 
       {/* <AuthenticatedComponent name={"John"}></AuthenticatedComponent> */}
 
